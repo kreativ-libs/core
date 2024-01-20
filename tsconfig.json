@@ -2,19 +2,23 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["dom", "ES2022"],
-    "useDefineForClassFields": true,
     "module": "ES2022",
     "rootDir": "./src",
     "outDir": "./dist",
     "moduleResolution": "node",
-    "preserveConstEnums": true,
     "isolatedModules": true,
-    "esModuleInterop": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": false,
+    "declaration": true,
+    "useDefineForClassFields": false,
+    "strict": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "preserveConstEnums": true,
+    "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*.ts"]
 }
