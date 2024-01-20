@@ -1,0 +1,38 @@
+{
+  "name": "@kreativ/core",
+  "version": "0.0.1",
+  "packageManager": "yarn@3.6.0",
+  "description": "Standard library-like utility methods.",
+  "scripts": {
+    "build": "npm run test && npm run compile && npm run copy",
+    "clean": "rm -rf ./dist",
+    "copy": "mkdir -p ./dist && cp ./README.md ./package.json ./LICENSE ./dist",
+    "copy:watch": "onchange -i ./README.md ./package.json ./LICENSE -- npm run copy",
+    "compile": "tsc",
+    "compile:watch": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "__DEV__": "",
+    "format": "prettier src/",
+    "format:fix": "prettier --write src/",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch"
+  },
+  "author": "zastrowm",
+  "license": "MIT",
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 120,
+    "bracketSpacing": true
+  },
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "prettier": "^3.2.4",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  }
+}
