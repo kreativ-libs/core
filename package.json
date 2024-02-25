@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "packageManager": "yarn@3.6.0",
   "description": "Standard library-like utility methods.",
+  "type": "module",
   "scripts": {
     "build": "npm run test && npm run compile && npm run copy",
     "clean": "rm -rf ./dist",
