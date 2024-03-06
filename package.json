@@ -13,6 +13,7 @@
     "compile:watch": "tsc --watch",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:ui": "vitest --ui",
     "__DEV__": "",
     "format": "prettier src/",
     "format:fix": "prettier --write src/",
@@ -47,6 +48,7 @@
     }
   },
   "devDependencies": {
+    "@vitest/ui": "^1.3.1",
     "onchange": "^7.1.0",
     "prettier": "^3.2.4",
     "release-it": "^17.0.3",
