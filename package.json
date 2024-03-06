@@ -28,9 +28,27 @@
     "printWidth": 120,
     "bracketSpacing": true
   },
+  "release-it": {
+    "git": {
+      "requireCleanWorkingDir": false,
+      "tag": true,
+      "commit": false,
+      "push": false
+    },
+    "npm": {
+      "ignoreVersion": true,
+      "publish": false,
+      "publishArgs": "--dry-run",
+      "skipChecks": true
+    },
+    "github": {
+      "release": true
+    }
+  },
   "devDependencies": {
     "onchange": "^7.1.0",
     "prettier": "^3.2.4",
+    "release-it": "^17.0.3",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vitest": "^1.2.1"
