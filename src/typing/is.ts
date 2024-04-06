@@ -13,4 +13,21 @@ export const is = {
   array: (value: unknown): value is unknown[] => {
     return Array.isArray(value)
   },
+  promise: (value: unknown): value is Promise<unknown> => {
+    if (value instanceof Promise) {
+      return true
+    }
+
+    return (
+      is.object(value) && //
+      has.function(value, 'then') &&
+      has.function(value, 'catch')
+    )
+  },
+}
+
+const has = {
+  function: (obj: object, key: string): boolean => {
+    return key in obj && is.function((obj as any)[key])
+  },
 }
